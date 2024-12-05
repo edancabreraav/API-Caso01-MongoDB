@@ -1,0 +1,12 @@
+#Ignorar los módulos de Node.js
+node_modules
+
+#Ignorar los archivos de registro
+*.log
+
+#Ignorar archivos de entorno
+.env
+
+#Ignorar los archivos de control de versiones
+.git
+.gitignore
