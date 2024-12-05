@@ -1,0 +1,269 @@
+{
+	"info": {
+		"_postman_id": "da33d748-aeec-40f9-a6bf-c5d6cd1f82b5",
+		"name": "Peticiones API-Caso01-MongoDB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31312992"
+	},
+	"item": [
+		{
+			"name": "Q1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "inherit"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/oficinas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"oficinas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Q2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/oficinas/envios/transito/oficinauno",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"oficinas",
+						"envios",
+						"transito",
+						"oficinauno"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Q3",
+			"request": {
+				"auth": {
+					"type": "inherit"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/oficinas/envios/porTIpo/terrestre",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"oficinas",
+						"envios",
+						"porTIpo",
+						"terrestre"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Q4",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/oficinas/envios/cliente/CURP11111",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"oficinas",
+						"envios",
+						"cliente",
+						"CURP11111"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Q5",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/oficinas/envios/oficina/oficinados",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"oficinas",
+						"envios",
+						"oficina",
+						"oficinados"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Q6",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/oficinas/envios/estatus/entregados",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"oficinas",
+						"envios",
+						"estatus",
+						"entregados"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Q7",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/oficinas/envios/terrestres",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"oficinas",
+						"envios",
+						"terrestres"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Q8",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/oficinas/envios/express/oficinados",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"oficinas",
+						"envios",
+						"express",
+						"oficinados"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Añadir cliente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"curp_id\": \"CURP77777\",\n  \"nombres\": \"Juan\",\n  \"apellidos\": {\n    \"paterno\": \"Pérez\",\n    \"materno\": \"García\"\n  },\n  \"email\": \"jp@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/clientes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"clientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Añadir envio",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"envio_id\": \"5678\",\n    \"fecha_envio\": \"2024-12-05\",\n    \"destino\": \"Ciudad X\",\n    \"tipo_envio\": {\n        \"descripcion\": \"terrestre\",\n        \"precio_km\": 10,\n        \"tiempo_entrega\": \"2 días\"\n    },\n    \"cliente\": {\n        \"curp_id\": \"CURP77777\",\n        \"nombre\": \"Juan\",\n        \"apellidos\": {\n            \"paterno\": \"Pérez\",\n            \"materno\": \"García\"\n        },\n        \"email\": \"juan@example.com\"\n    },\n    \"peso\": 5,\n    \"dimensiones\": {\n        \"alto\": 20,\n        \"ancho\": 15,\n        \"profundidad\": 10\n    },\n    \"costo\": 100,\n    \"estatus\": \"tránsito\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/oficinas/oficinatres/envios/CURP77777",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"oficinas",
+						"oficinatres",
+						"envios",
+						"CURP77777"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
