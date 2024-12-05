@@ -142,7 +142,6 @@ BODY:
 
 # Datos de prueba
 ```bash
-Datos de prueba
 use empresa
 db.oficinas.insertMany(
 	[
